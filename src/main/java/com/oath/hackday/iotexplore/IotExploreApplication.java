@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class IotExploreApplication {
 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		SpringApplication.run(IotExploreApplication.class, args);
 
@@ -18,10 +18,10 @@ public class IotExploreApplication {
 		}
 		switch (args[0]) {
 			case "publisher":
-				HackathonPublisher.main(args);
+				com.oath.hackday.hackathon.HackathonPublisher.main(args);
 				break;
 			case "subscriber":
-				HackathonSubscriber.main(args);
+				com.oath.hackday.hackathon.HackathonSubscriber.main(args);
 				break;
 			default:
 				throw new IllegalArgumentException("Don't know how to do " + args[0]);
