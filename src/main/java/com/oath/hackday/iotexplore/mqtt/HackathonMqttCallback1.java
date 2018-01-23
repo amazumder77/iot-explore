@@ -1,4 +1,4 @@
-package com.oath.hackday.hackathon;
+package com.oath.hackday.iotexplore.mqtt;
 
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;

@@ -1,4 +1,4 @@
-package com.oath.hackday.hackathon;
+package com.oath.hackday.iotexplore.mqtt;
 
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
@@ -31,7 +31,7 @@ public class HackathonPublisher {
 //        System.out.println("== END PUBLISHER ==");
             Thread.sleep(3000);
 
-            client.setCallback( new HackathonMqttCallback() );
+            client.setCallback( new com.oath.hackday.iotexplore.mqtt.HackathonMqttCallback() );
 //            client.connect();
 
             client.subscribe("iot_data1");

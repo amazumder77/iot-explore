@@ -1,5 +1,6 @@
 package com.oath.hackday.iotexplore;
 
+import org.eclipse.paho.client.mqttv3.MqttException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class IotExploreApplication {
 
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, MqttException {
 
 		SpringApplication.run(IotExploreApplication.class, args);
 
@@ -18,10 +19,10 @@ public class IotExploreApplication {
 		}
 		switch (args[0]) {
 			case "publisher":
-				com.oath.hackday.hackathon.HackathonPublisher.main(args);
+				com.oath.hackday.iotexplore.mqtt.HackathonPublisher.main(args);
 				break;
 			case "subscriber":
-				com.oath.hackday.hackathon.HackathonSubscriber.main(args);
+				com.oath.hackday.iotexplore.mqtt.HackathonSubscriber.main(args);
 				break;
 			default:
 				throw new IllegalArgumentException("Don't know how to do " + args[0]);
