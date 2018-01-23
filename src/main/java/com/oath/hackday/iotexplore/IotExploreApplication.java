@@ -9,8 +9,7 @@ public class IotExploreApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(IotExploreApplication.class, args);
-		//TODO: Push IP and Port
-        System.out.println ("hello world");
+		System.out.println ("Starting IOT application on a hack day");
 	}
 
 }
